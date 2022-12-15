@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS DISCOUNTS ( id int NOT NULL AUTO_INCREMENT PRIMARY KEY, amount int NOT NULL, CHECK (amount >= 0 and amount <= 100), date_of_start timestamp, product_id int NOT NULL, CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(id));
